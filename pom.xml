@@ -5,12 +5,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.wjalong</groupId>
-  <artifactId>the-dream</artifactId>
+  <artifactId>long-blog</artifactId>
   <version>1.0-SNAPSHOT</version>
   <modules>
-    <module>dream-gateway</module>
+    <module>long-gateway</module>
   </modules>
-  <name>the-dream</name>
+  <name>long-blog</name>
   <packaging>pom</packaging>
 
   <properties>

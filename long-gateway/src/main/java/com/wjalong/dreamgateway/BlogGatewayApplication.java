@@ -2,12 +2,14 @@ package com.wjalong.dreamgateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-public class DreamGatewayApplication {
+@EnableDiscoveryClient
+public class BlogGatewayApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DreamGatewayApplication.class, args);
+		SpringApplication.run(BlogGatewayApplication.class, args);
 	}
 
 }
