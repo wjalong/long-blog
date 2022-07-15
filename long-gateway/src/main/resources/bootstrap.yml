@@ -21,8 +21,4 @@ spring:
         default-context: /
         # key
         data-key: long-gateway
-    gateway:
-      discovery:
-        locator:
-          enabled: true
 

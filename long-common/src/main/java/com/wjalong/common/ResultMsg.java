@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class ResultMsg<T> {
 
-	private Integer code = 200;
+	private String code = "success";
 	private String msg = "";
 	private T data;
 	private Date reponseTime = new Date();
@@ -12,14 +12,14 @@ public class ResultMsg<T> {
 	public ResultMsg() {
 	}
 
-	private ResultMsg(Integer code, String msg, T data) {
+	private ResultMsg(String code, String msg, T data) {
 		super();
 		this.code = code;
 		this.msg = msg;
 		this.data = data;
 	}
 
-	public Integer getCode() {
+	public String getCode() {
 		return code;
 	}
 
@@ -32,19 +32,19 @@ public class ResultMsg<T> {
 	}
 
 	public static <T extends Object> ResultMsg<T> ok(T obj){
-		 return new ResultMsg<T>(200,"成功",obj);
+		return new ResultMsg<T>("success","成功",obj);
 	}
-	
+
 	public static <T extends Object> ResultMsg<T> ok(){
-		 return new ResultMsg<T>(200,"成功",null);
+		return new ResultMsg<T>("success","成功",null);
 	}
-	
-	public static <T extends Object> ResultMsg<T> fail(Integer errorCode,String errorMsg){
-		 return new ResultMsg<T>(errorCode, errorMsg, null);
+
+	public static <T extends Object> ResultMsg<T> fail(String errorCode,String errorMsg){
+		return new ResultMsg<T>(errorCode, errorMsg, null);
 	}
-	
-	public static <T extends Object> ResultMsg<T> fail(Integer errorCode,String errorMsg,T obj){
-		 return new ResultMsg<T>(errorCode, errorMsg, obj);
+
+	public static <T extends Object> ResultMsg<T> fail(String errorCode,String errorMsg,T obj){
+		return new ResultMsg<T>(errorCode, errorMsg, obj);
 	}
 
 	public Date getReponseTime() {
