@@ -2,9 +2,7 @@ package com.wjalong.blog.config;
 
 
 import cn.hutool.core.util.ObjectUtil;
-import com.wjalong.blog.anno.PassToken;
 import com.wjalong.common.exception.BizException;
-import com.wjalong.util.DeviceUtils;
 import com.wjalong.util.web.SessionUser;
 import com.wjalong.util.web.SessionUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.lang.reflect.Method;
 import java.util.Locale;
 
 /**
